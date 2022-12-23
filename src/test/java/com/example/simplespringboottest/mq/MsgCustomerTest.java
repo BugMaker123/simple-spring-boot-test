@@ -16,12 +16,12 @@ public class MsgCustomerTest {
     RabbitTemplate rabbitTemplate;
 
     @Test
-    public void dealMsg(){
-            while(true){
-                Message message = rabbitTemplate.receive("dyhQueue", 2000L);
-                if (message!=null){
-                    System.out.println(message.getMessageProperties());
-                }
+    public void dealMsg() {
+        while (true) {
+            Message message = rabbitTemplate.receive("dyhQueue", 2000L);
+            if (message != null) {
+                System.out.println(message.getMessageProperties());
             }
+        }
     }
 }
